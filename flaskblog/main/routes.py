@@ -1,5 +1,5 @@
 from flask import render_template, request, Blueprint
-from flaskblog.models import Post
+from flaskblog.models import Post, User
 
 main = Blueprint('main', __name__)
 
@@ -14,4 +14,5 @@ def home():
 
 @main.route("/about")
 def about():
-    return render_template('about.html', title='About')
+    user = User.query.filter_by(email='puramnihal@gmail.com').first()
+    return render_template('about.html', title='About', user=user)

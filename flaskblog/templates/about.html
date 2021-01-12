@@ -1,4 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>about page</h1>
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post no-image page no-image">
+
+            <header class="post-full-header">
+                <h2 class="post-full-title">About</h2>
+            </header>
+            <p style="text-align:center;">
+            <img class="rounded-circle" src="{{ url_for('static', filename='profile_pics/' + user.image_file) }}">
+            </p>
+            <div class="media-body">
+            <p style="text-align: center;"><strong><span style="font-size: 24px;">Nihal Puram</span></strong></p>
+<p style="text-align: left;"><span style="font-size: 18px;">I am a student in Aerospace engineering At IIT Madras. I am self-taught at python, ML and web-development using python. You can check out my GitHub page&nbsp;<a href="https://github.com/realnihal" rel="noopener noreferrer" target="_blank">here</a>.</span></p>
+            <section class="post-full-content">
+                <div class="post-content">
+                    <p> 
+                    </p>
+                </div>
+            </section>
+
+        </article>
+
+    </div>
+</main>
+
 {% endblock content %}
