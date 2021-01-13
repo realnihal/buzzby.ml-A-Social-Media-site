@@ -44,7 +44,7 @@ def create_news_business():
 
 
     
-    def create_news_entertainment():
+def create_news_entertainment():
     url="http://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
 
     response = urllib.urlopen(url)
@@ -64,7 +64,7 @@ def create_news_business():
 
 
 
-    def create_news_sports():
+def create_news_sports():
     url="http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
 
     response = urllib.urlopen(url)
@@ -83,7 +83,7 @@ def create_news_business():
     return [author, titles, urlsOfNews, descriptions]
 
 
-    def create_news_health():
+def create_news_health():
     url="http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
 
     response = urllib.urlopen(url)
