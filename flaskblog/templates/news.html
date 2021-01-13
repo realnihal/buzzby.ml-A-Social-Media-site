@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
 {% for article_no in range(length) %}
-        <article class="media content-section">
-          <div class="media-body">
+        <div class="content-section">
             <div>
-              {{ titles[article_no] }}
-              <small>{{ author[article_no] }}</small>
+                {{ titles[article_no] }}
+                <small>{{ author[article_no] }}</small>
             </div>
-            <p>{{ descriptions[article_no] }}</p>
-          </div>
+            <div>
+                <p>{{ descriptions[article_no] }}</p>
+            </div>
           {{ urls[article_no] }}
-        </article>
+        </div>
     {% endfor %}
 {% endblock content %}
