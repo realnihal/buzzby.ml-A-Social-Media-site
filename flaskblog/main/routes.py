@@ -27,7 +27,7 @@ def about():
 
 
 @main.route("/news")
-def news_business():
+def news():
     article = create_news()
     author = article[0]
     titles = article[1]
@@ -38,7 +38,7 @@ def news_business():
 
 
 @main.route("/news/business")
-def news():
+def news_business():
     article = create_news_business()
     author = article[0]
     titles = article[1]
