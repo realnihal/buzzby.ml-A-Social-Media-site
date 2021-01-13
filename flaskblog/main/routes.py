@@ -1,7 +1,7 @@
 from flask import render_template, request, Blueprint
 from flaskblog.models import Post, User
 from flask_login import current_user
-from flaskblog.news import create_news, create_news_business
+from flaskblog.news import create_news, create_news_business, create_news_entertainment, create_news_sports, create_news_health
 
 
 main = Blueprint('main', __name__)
@@ -39,6 +39,38 @@ def news():
 
 @main.route("/news/business")
 def news_business():
+    article = create_news_business()
+    author = article[0]
+    titles = article[1]
+    urlsOfNews = article[2]
+    descriptions = article[3]
+    num = len(titles)
+    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+
+@main.route("/news/entertainment")
+def news_entertainment():
+    article = create_news_business()
+    author = article[0]
+    titles = article[1]
+    urlsOfNews = article[2]
+    descriptions = article[3]
+    num = len(titles)
+    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+
+
+@main.route("/news/sports")
+def news_sports():
+    article = create_news_business()
+    author = article[0]
+    titles = article[1]
+    urlsOfNews = article[2]
+    descriptions = article[3]
+    num = len(titles)
+    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+
+
+@main.route("/news/health")
+def news_health():
     article = create_news_business()
     author = article[0]
     titles = article[1]
