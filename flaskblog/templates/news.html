@@ -1,5 +1,15 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>News Goes Here</h1>
-
+{% for article_no in range(len) %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              {{ title[article_no] }}
+              <small class="text-muted">{{ author[article_no] }}</small>
+            </div>
+            <p class="article-content">{{ description[article_no] }}</p>
+          </div>
+          {{ url[article_no] }}
+        </article>
+    {% endfor %}
 {% endblock content %}

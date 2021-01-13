@@ -1,6 +1,8 @@
 from flask import render_template, request, Blueprint
 from flaskblog.models import Post, User
 from flask_login import current_user
+from flaskblog.news import create_news
+
 
 main = Blueprint('main', __name__)
 
@@ -26,4 +28,6 @@ def about():
 
 @main.route("/news")
 def news():
-    return render_template('news.html', title='News')
+    author, titles, urlsOfNews, descriptions = create_news()
+    num = len(titles)
+    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
