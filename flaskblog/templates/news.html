@@ -3,13 +3,16 @@
 {% for article_no in range(length) %}
         <div class="content-section">
             <div>
-                {{ titles[article_no] }}
-                <small>{{ author[article_no] }}</small>
+                <h4>{{ titles[article_no] }}</h4>
+                <p>
+                    <small>{{ author[article_no] }}</small>
+                </p>
             </div>
+            <hr style="height:2px;width:200px;border-width:0;color:gray;background-color:gray">
             <div>
                 <p>{{ descriptions[article_no] }}</p>
             </div>
-          {{ urls[article_no] }}
+          <a href="{{ urls[article_no] }}">link to article</a>
         </div>
     {% endfor %}
 {% endblock content %}
