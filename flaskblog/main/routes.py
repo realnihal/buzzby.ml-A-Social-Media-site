@@ -28,6 +28,8 @@ def about():
 
 @main.route("/news")
 def news():
+    if not current_user.is_authenticated:
+    return start()
     article = create_news()
     author = article[0]
     titles = article[1]
@@ -39,6 +41,8 @@ def news():
 
 @main.route("/news/business")
 def news_business():
+    if not current_user.is_authenticated:
+    return start()
     article = create_news_business()
     author = article[0]
     titles = article[1]
@@ -49,6 +53,8 @@ def news_business():
 
 @main.route("/news/entertainment")
 def news_entertainment():
+    if not current_user.is_authenticated:
+    return start()
     article = create_news_entertainment()
     author = article[0]
     titles = article[1]
@@ -60,6 +66,8 @@ def news_entertainment():
 
 @main.route("/news/sports")
 def news_sports():
+    if not current_user.is_authenticated:
+    return start()
     article = create_news_sports()
     author = article[0]
     titles = article[1]
@@ -71,6 +79,8 @@ def news_sports():
 
 @main.route("/news/health")
 def news_health():
+    if not current_user.is_authenticated:
+    return start()
     article = create_news_health()
     author = article[0]
     titles = article[1]
@@ -82,6 +92,8 @@ def news_health():
 
 @main.route("/news/science")
 def news_science():
+    if not current_user.is_authenticated:
+    return start()
     article = create_news_science()
     author = article[0]
     titles = article[1]
@@ -94,6 +106,8 @@ def news_science():
 
 @main.route("/news/technology")
 def news_technology():
+    if not current_user.is_authenticated:
+    return start()
     article = create_news_technology()
     author = article[0]
     titles = article[1]
