@@ -94,7 +94,7 @@
                   Feel free to register, and start posting!
                   {% endif %}
                   <ul class="list-group">
-                    <li class="list-group-item list-group-item-light"><a href="{{ url_for('main.home') }}">Latest Posts</a></li>
+                    <li class="list-group-item list-group-item-light"><a href="{{ url_for('main.news_business') }}">Business</a></li>
                     <li class="list-group-item list-group-item-light"><a href="{{ url_for('main.news') }}">Sports</a></li>
                     <li class="list-group-item list-group-item-light"><a href="{{ url_for('main.home') }}">Entertainment</a></li>
                     {% if current_user.is_authenticated %}
