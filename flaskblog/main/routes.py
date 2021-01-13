@@ -60,7 +60,7 @@ def news_entertainment():
 
 @main.route("/news/sports")
 def news_sports():
-    article = create_news_sports)
+    article = create_news_sports()
     author = article[0]
     titles = article[1]
     urlsOfNews = article[2]
