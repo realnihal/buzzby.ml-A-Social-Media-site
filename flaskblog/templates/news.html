@@ -5,7 +5,11 @@
             <div>
                 <h4>{{ titles[article_no] }}</h4>
                 <p>
+                    {% if author[article_no]==None  %}
+                    <small>author unknown</small>
+                    {% else %}
                     <small>{{ author[article_no] }}</small>
+                    {% endif %}
                 </p>
             </div>
             <hr style="height:2px;width:200px;border-width:0;color:gray;background-color:gray">
