@@ -3,11 +3,11 @@
 {% for article_no in range(length) %}
         <article class="media content-section">
           <div class="media-body">
-            <div class="article-metadata">
+            <div>
               {{ titles[article_no] }}
-              <small class="text-muted">{{ author[article_no] }}</small>
+              <small>{{ author[article_no] }}</small>
             </div>
-            <p class="article-content">{{ descriptions[article_no] }}</p>
+            <p>{{ descriptions[article_no] }}</p>
           </div>
           {{ urls[article_no] }}
         </article>
