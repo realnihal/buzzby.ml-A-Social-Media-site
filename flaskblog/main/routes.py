@@ -1,7 +1,7 @@
 from flask import render_template, request, Blueprint
 from flaskblog.models import Post, User
 from flask_login import current_user
-from flaskblog.news import create_news, create_news_business, create_news_entertainment, create_news_sports, create_news_health
+from flaskblog.news import create_news, create_news_business, create_news_entertainment, create_news_sports, create_news_health, create_news_science, create_news_technology
 
 
 main = Blueprint('main', __name__)
@@ -72,6 +72,29 @@ def news_sports():
 @main.route("/news/health")
 def news_health():
     article = create_news_health()
+    author = article[0]
+    titles = article[1]
+    urlsOfNews = article[2]
+    descriptions = article[3]
+    num = len(titles)
+    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+
+
+@main.route("/news/science")
+def news_science():
+    article = create_news_science()
+    author = article[0]
+    titles = article[1]
+    urlsOfNews = artitechnology
+    descriptions = article[3]
+    num = len(titles)
+    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+
+
+
+@main.route("/news/technology")
+def news_technology():
+    article = create_news_technology()
     author = article[0]
     titles = article[1]
     urlsOfNews = article[2]
