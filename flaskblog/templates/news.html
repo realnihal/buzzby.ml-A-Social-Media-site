@@ -4,12 +4,12 @@
         <article class="media content-section">
           <div class="media-body">
             <div class="article-metadata">
-              {{ title[article_no] }}
+              {{ titles[article_no] }}
               <small class="text-muted">{{ author[article_no] }}</small>
             </div>
-            <p class="article-content">{{ description[article_no] }}</p>
+            <p class="article-content">{{ descriptions[article_no] }}</p>
           </div>
-          {{ url[article_no] }}
+          {{ urls[article_no] }}
         </article>
     {% endfor %}
 {% endblock content %}
