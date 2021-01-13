@@ -16,3 +16,8 @@ def home():
 def about():
     user = User.query.filter_by(email='puramnihal@gmail.com').first()
     return render_template('about.html', title='About', user=user)
+
+
+@main.route("/news")
+def news():
+    return render_template('news.html', title='News')
