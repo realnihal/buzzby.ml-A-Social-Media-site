@@ -49,7 +49,7 @@ def news_business():
 
 @main.route("/news/entertainment")
 def news_entertainment():
-    article = create_news_business()
+    article = create_news_entertainment()
     author = article[0]
     titles = article[1]
     urlsOfNews = article[2]
@@ -60,7 +60,7 @@ def news_entertainment():
 
 @main.route("/news/sports")
 def news_sports():
-    article = create_news_business()
+    article = create_news_sports)
     author = article[0]
     titles = article[1]
     urlsOfNews = article[2]
@@ -71,7 +71,7 @@ def news_sports():
 
 @main.route("/news/health")
 def news_health():
-    article = create_news_business()
+    article = create_news_health()
     author = article[0]
     titles = article[1]
     urlsOfNews = article[2]
