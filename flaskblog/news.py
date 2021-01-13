@@ -3,7 +3,7 @@ import json
 
 
 
-def create_news(source):
+def create_news(source='plain'):
 
     if source == 'plain':
         url="http://newsapi.org/v2/top-headlines?country=in&sports&apiKey=7b57dbfa104847e6b72e2a4b28e51401"

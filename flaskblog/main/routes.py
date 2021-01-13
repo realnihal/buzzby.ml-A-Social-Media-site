@@ -27,7 +27,7 @@ def about():
 
 
 @main.route("/news")
-def news(source='plain'):
+def news(source):
     article = create_news(source)
     author = article[0]
     titles = article[1]
