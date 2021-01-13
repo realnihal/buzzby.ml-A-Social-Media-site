@@ -41,9 +41,7 @@
                 </div>
                 <div class="form-group">
                     {{ form.picture.label() }}
-                    <p>
-                    <small class="text-muted ml-2" > Please ensure the picture dimensions is a square</small>
-                    </p>
+                    <small class="text-muted ml-2" >(Please ensure the picture dimensions is a square)</small>
                     {{ form.picture(class="form-control-file") }}
                     {% if form.picture.errors %}
                         {% for error in form.picture.errors %}
