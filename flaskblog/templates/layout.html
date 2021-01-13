@@ -68,13 +68,13 @@
               Feel free to register, and start posting!
               {% endif %}
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light"><a href="{{ url_for('main.home') }}">Latest Posts</a></li>
-                <li class="list-group-item list-group-item-light"><a href="{{ url_for('main.news') }}">News</a></li>
-                <li class="list-group-item list-group-item-light"><a href="{{ url_for('main.home') }}">Blank</a></li>
+                <li class="list-group-item list-group-item-light nav-link"><a href="{{ url_for('main.home') }}">Latest Posts</a></li>
+                <li class="list-group-item list-group-item-light nav-link"><a href="{{ url_for('main.news') }}">News</a></li>
+                <li class="list-group-item list-group-item-light nav-link"><a href="{{ url_for('main.home') }}">Blank</a></li>
                 {% if current_user.is_authenticated %}
-                  <li class="list-group-item list-group-item-light"><a href="{{ url_for('users.logout') }}">Sign out</a></li>
+                  <li class="list-group-item list-group-item-light nav-link"><a href="{{ url_for('users.logout') }}">Sign out</a></li>
                 {% else %}
-                  <li class="list-group-item list-group-item-light"><a href="{{ url_for('users.login') }}">Login</a></li>
+                  <li class="list-group-item list-group-item-light nav-link"><a href="{{ url_for('users.login') }}">Login</a></li>
                 {% endif %}
               </ul>
             </p>
