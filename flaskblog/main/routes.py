@@ -5,11 +5,11 @@ from flask_login import current_user
 main = Blueprint('main', __name__)
 
 
-@main.route("/home")
+@main.route("/")
 def start():
     return render_template('main.html')
 
-@main.route("/")
+@main.route("/home")
 def home():
     if not current_user.is_authenticated:
         flash('You must be logged in', 'warning')
