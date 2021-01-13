@@ -7,6 +7,8 @@ main = Blueprint('main', __name__)
 
 @main.route("/")
 def start():
+    if current_user.is_authenticated:
+        return home()
     return render_template('main.html')
 
 @main.route("/home")
