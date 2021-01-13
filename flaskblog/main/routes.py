@@ -85,7 +85,7 @@ def news_science():
     article = create_news_science()
     author = article[0]
     titles = article[1]
-    urlsOfNews = artitechnology
+    urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
     return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
