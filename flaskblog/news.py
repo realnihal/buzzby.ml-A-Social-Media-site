@@ -4,7 +4,7 @@ import json
 
 
 def create_news():
-    url="http://newsapi.org/v2/everything?q=bitcoin&from=2020-12-13&sortBy=publishedAt&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
     response = urllib.urlopen(url)
     data = json.loads(response.read())
 
