@@ -18,5 +18,5 @@ def create_news():
         titles.append(i["title"])
         urlsOfNews.append(i["url"])
         descriptions.append(i["description"])
-    return author, titles, urlsOfNews, descriptions;
+    return [author, titles, urlsOfNews, descriptions]
     

@@ -28,6 +28,10 @@ def about():
 
 @main.route("/news")
 def news():
-    author, titles, urlsOfNews, descriptions = create_news()
+    article = create_news()
+    author = article[0]
+    titles = article[1]
+    urlsOfNews = article[2]
+    descriptions = article[3]
     num = len(titles)
     return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
