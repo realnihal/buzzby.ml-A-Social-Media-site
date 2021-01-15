@@ -34,7 +34,7 @@ def news():
     urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
-    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+    return render_template('news.html', title='Top Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
 
 
 @main.route("/news/business")
@@ -45,7 +45,7 @@ def news_business():
     urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
-    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+    return render_template('news.html', title='Business Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
 
 @main.route("/news/entertainment")
 def news_entertainment():
@@ -55,7 +55,7 @@ def news_entertainment():
     urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
-    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+    return render_template('news.html', title='Entertainment Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
 
 
 @main.route("/news/sports")
@@ -66,7 +66,7 @@ def news_sports():
     urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
-    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+    return render_template('news.html', title='Sports Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
 
 
 @main.route("/news/health")
@@ -77,7 +77,7 @@ def news_health():
     urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
-    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+    return render_template('news.html', title='Health Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
 
 
 @main.route("/news/science")
@@ -88,7 +88,7 @@ def news_science():
     urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
-    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+    return render_template('news.html', title='Science Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
 
 
 
@@ -100,4 +100,4 @@ def news_technology():
     urlsOfNews = article[2]
     descriptions = article[3]
     num = len(titles)
-    return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+    return render_template('news.html', title='Technology Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
