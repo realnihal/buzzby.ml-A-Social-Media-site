@@ -48,6 +48,7 @@ def news_business():
     return render_template('news.html', title='News', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
 
 @main.route("/news/entertainment")
+def news_entertainment():
     article = create_news_entertainment()
     author = article[0]
     titles = article[1]
