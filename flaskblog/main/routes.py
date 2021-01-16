@@ -2,7 +2,7 @@ from flask import render_template, request, Blueprint
 from flaskblog.models import Post, User
 from flask_login import current_user
 from flaskblog.news import create_news, create_news_business, create_news_entertainment, create_news_sports, create_news_health, create_news_science, create_news_technology
-
+from flaskblog.weather import weather_data 
 
 main = Blueprint('main', __name__)
 
@@ -101,3 +101,9 @@ def news_technology():
     descriptions = article[3]
     num = len(titles)
     return render_template('news.html', title='Technology Headlines', author=author,titles=titles,urls=urlsOfNews,descriptions=descriptions,length=num)
+
+
+
+@main.route("/weather")
+def weather():
+    return render_template('weather.html')
