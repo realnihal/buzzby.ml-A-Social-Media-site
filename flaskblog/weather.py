@@ -9,7 +9,7 @@ URL = BASE_URL + "q=" + CITY + "&appid=" + API_KEY
 def weather_data(CITY):
     city=CITY
     response = requests.get(URL)
-    if response.status_code == 200:\
+    if response.status_code == 200:
         data = response.json()
         main = data['main']
         temperature = main['temp']
