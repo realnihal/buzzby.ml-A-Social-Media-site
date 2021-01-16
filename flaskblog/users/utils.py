@@ -28,6 +28,13 @@ def send_reset_email(user):
     msg.body = f'''To reset your password, visit the following link:
 {url_for('users.reset_token', token=token, _external=True)}
 If you did not make this request then simply ignore this email and no changes will be made.
+
+You can go ahead and login with your credentails, to experience our services. Check out the news page for upto date stories on different topics from different news sources. Post new stories everyday, for other users to read. 
+
+Enjoy,
+Nihal Puram
+Creator
+Buzzby
 '''
     mail.send(msg)
 

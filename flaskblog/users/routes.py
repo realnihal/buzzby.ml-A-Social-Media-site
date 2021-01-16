@@ -15,12 +15,12 @@ def register():
         return redirect(url_for('main.home'))
     form = RegistrationForm()
     if form.validate_on_submit():
+        send_mail_register(user)
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
         user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(user)
         db.session.commit()
-        send_mail_register(user)
-        flash('Your account has been created! You are now able to log in', 'success')
+        flash('Your account has been created! You are now able to log in. You should recieve an email confirmation', 'success')
         return redirect(url_for('users.login'))
     return render_template('register.html', title='Register', form=form)
 
