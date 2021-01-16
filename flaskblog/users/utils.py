@@ -33,13 +33,13 @@ If you did not make this request then simply ignore this email and no changes wi
 
 
 
-def send_reset_email(user):
-    token = user.get_reset_token()
-    msg = Message('Password Reset Request',
-                  sender='noreply@demo.com',
+def send_mail_register(user):
+    msg = Message('Thank you for registering with us',
+                  sender='noreply.nihalblog@gmail.com',
                   recipients=[user.email])
-    msg.body = f'''To reset your password, visit the following link:
-{url_for('users.reset_token', token=token, _external=True)}
-If you did not make this request then simply ignore this email and no changes will be made.
+    msg.body = f'''Thank you For registering your account with us:
+If you did not make this request then please contact support.
+
+Buzzby
 '''
     mail.send(msg)
