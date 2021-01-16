@@ -18,4 +18,4 @@ def weather_data(CITY):
         report = data['weather']
         return [CITY,temperature,humidity,pressure,report]
     else:
-    print("Error in the HTTP request")
+        print("Error in the HTTP request")
