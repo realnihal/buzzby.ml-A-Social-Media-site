@@ -35,7 +35,7 @@ If you did not make this request then simply ignore this email and no changes wi
 
 def send_mail_register(user):
     msg = Message('Thank you for registering with us',
-                  sender='noreply.nihalblog@gmail.com',
+                  sender='noreply@gmail.com',
                   recipients=[user.email])
     msg.body = f'''Thank you For registering your account with us:
 If you did not make this request then please contact support.
