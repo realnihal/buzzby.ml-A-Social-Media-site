@@ -115,7 +115,7 @@ def weather():
         humidity =  weather_list[2]
         pressure =  weather_list[3]
         report =  weather_list[4]
-        return render_template('weather.html',title= weather,form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
+        return render_template('weather.html',title= 'weather',form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
     
     weather_list = weather_data('hyderabad')
     city_name =  weather_list[0]
@@ -123,4 +123,4 @@ def weather():
     humidity =  weather_list[2]
     pressure =  weather_list[3]
     report =  weather_list[4]
-    return render_template('weather.html',title= weather,form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
+    return render_template('weather.html',title= 'weather',form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
