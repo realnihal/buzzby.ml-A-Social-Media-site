@@ -3,7 +3,7 @@
 <h3>Current weather in your city:</h3>
 <div class='content-section'>
 <div>
-    <h2 class="article-title">{{ city_name.title() }}</h2>
+    <h1 class="article-title">{{ city_name.title() }}</h1>
     <p class="article-content">
         Temparature : {{ temperature }}°C
         Humidity : {{ humidity }}
@@ -16,7 +16,7 @@
         <form method="POST" action="">
             <div class="form-group">
                 <fieldset class="form-group">
-                    {{ form.CITY.label(class="form-control-label") }}
+                    Enter a different city:
                     {{ form.CITY(class="form-control form-control-lg") }}
                 </fieldset>
             </div>
