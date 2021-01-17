@@ -9,7 +9,7 @@ def weather_data(CITY):
     if response.status_code == 200:
         data = response.json()
         main = data['main']
-        temperature = main['temp'] - 273
+        temperature = '%.2f'%(main['temp'] - 273)
         humidity = main['humidity']
         pressure = main['pressure']
         report = data['weather']
