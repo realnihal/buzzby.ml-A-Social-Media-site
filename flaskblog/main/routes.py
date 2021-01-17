@@ -109,6 +109,7 @@ def news_technology():
 def weather():
     form = WeatherForm()
     if form.validate_on_submit():
+        form = WeatherForm()
         city = form.city.data
         weather_list = weather_data(city)
         city_name =  weather_list[0]
