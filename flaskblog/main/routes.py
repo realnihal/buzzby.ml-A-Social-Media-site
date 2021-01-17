@@ -110,7 +110,8 @@ def weather():
     form = WeatherForm()
     if request.method == 'POST':
         city = request.form['CITY']
-    else city = 'hyderabad'
+    else:
+         city = 'hyderabad'
 
     weather_list = weather_data(city)
     city_name =  weather_list[0]
