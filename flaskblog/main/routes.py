@@ -107,20 +107,13 @@ def news_technology():
 
 @main.route("/weather",methods=['GET', 'POST'])
 def weather():
-    form = WeatherForm()
-    if form.validate_on_submit():
-        city_name = form.city.data
-        weather_list = weather_data(city_name)
-        temperature =  weather_list[1]
-        humidity =  weather_list[2]
-        pressure =  weather_list[3]
-        report =  weather_list[4]
-        return render_template('weather.html',title= 'weather',form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
-    elif not form.validate_on_submit():
-        weather_list = weather_data('delhi')
-        city_name =  weather_list[0]
-        temperature =  weather_list[1]
-        humidity =  weather_list[2]
-        pressure =  weather_list[3]
-        report =  weather_list[4]
-        return render_template('weather.html',title= 'weather',form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
+    if request.method == 'POST':
+        city = request.form['CITY']
+
+    weather_list = weather_data('delhi')
+    city_name =  weather_list[0]
+    temperature =  weather_list[1]
+    humidity =  weather_list[2]
+    pressure =  weather_list[3]
+    report =  weather_list[4]
+    return render_template('weather.html',title= 'weather',form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
