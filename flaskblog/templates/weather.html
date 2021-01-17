@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<h3>Today's Weather in your city:</h3>
+<h3>Current weather in your city:</h3>
 <div class='content-section'>
 <div>
     <h2 class="article-title">{{ city_name.title() }}</h2>
@@ -10,5 +10,16 @@
         Pressure : {{ pressure }}
         Report : {{ report[0]['description'] }}
     </p></div>
+</div>
+<div class='content-section'>
+    <div>
+        <form method="POST" action="">
+            <div class="form-group">
+                {{ form.CITY.label(class="form-control-label") }}
+                {{ form.title(class="form-control form-control-lg") }}
+            </div>
+
+        </form>
+    </div>
 </div>
 {% endblock content %}
