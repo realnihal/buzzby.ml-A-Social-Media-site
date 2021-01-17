@@ -1,4 +1,4 @@
-from flask import render_template, request, Blueprint
+from flask import render_template, request, Blueprint, redirect
 from flaskblog.models import Post, User
 from flask_login import current_user
 from flaskblog.news import create_news, create_news_business, create_news_entertainment, create_news_sports, create_news_health, create_news_science, create_news_technology
@@ -109,7 +109,7 @@ def news_technology():
 def weather():
     form = WeatherForm()
     if form.validate_on_submit():
-        return weather_form(form)
+        return redirect(weather_form(form))
     else:
         weather_list = weather_data('nalgonda')
         city_name =  weather_list[0]
