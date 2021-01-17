@@ -117,7 +117,7 @@ def weather():
         humidity =  weather_list[2]
         pressure =  weather_list[3]
         report =  weather_list[4]
-        return render_template('weather.html',title= weather,form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
+        return render_template('weather.html',title= "weather",form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
 
 @main.route("/weather",methods=['GET', 'POST'])
 def weather_form(form):
@@ -128,4 +128,4 @@ def weather_form(form):
     humidity =  weather_list[2]
     pressure =  weather_list[3]
     report =  weather_list[4]
-    return render_template('weather.html',title= weather,form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
+    return render_template('weather.html',title= "weather",form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
