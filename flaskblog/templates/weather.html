@@ -1,6 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
+<h3>Today's Weather in your city:</h3>
 <div class='content-section'>
-    weather page
+<div>
+    <h2 class="article-title">{{ city_name }}</h2>
+    <p class="article-content">
+        Temparature : {{ temperature }}
+        Humidity : {{ humidity }}
+        Pressure : {{ pressure }}
+        Weather Report : {{ report }}
+    </p></div>
 </div>
 {% endblock content %}
