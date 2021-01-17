@@ -107,10 +107,12 @@ def news_technology():
 
 @main.route("/weather",methods=['GET', 'POST'])
 def weather():
+    form = WeatherForm()
     if request.method == 'POST':
         city = request.form['CITY']
+    else city = 'hyderabad'
 
-    weather_list = weather_data('delhi')
+    weather_list = weather_data(city)
     city_name =  weather_list[0]
     temperature =  weather_list[1]
     humidity =  weather_list[2]
