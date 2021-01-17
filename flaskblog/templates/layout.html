@@ -33,7 +33,7 @@
               {% if current_user.is_authenticated %}
                 <a class="nav-item nav-link" href="{{ url_for('main.home') }}">Latest Posts</a>
                 <a class="nav-item nav-link" href="{{ url_for('posts.new_post') }}">New Post</a>
-              {% else %}
+              {% endif %}
               <a class="nav-item nav-link" href="{{ url_for('main.weather') }}">Weather</a>
               <a class="nav-item nav-link" href="{{ url_for('main.news') }}">News</a>
               {% if current_user.is_authenticated %}
