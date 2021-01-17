@@ -111,7 +111,7 @@ def weather():
     if form.validate_on_submit():
         return weather_form(form)
     else:
-        weather_list = weather_data('hyderabad')
+        weather_list = weather_data('nalgonda')
         city_name =  weather_list[0]
         temperature =  weather_list[1]
         humidity =  weather_list[2]
