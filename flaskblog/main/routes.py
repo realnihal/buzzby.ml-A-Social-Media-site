@@ -107,7 +107,7 @@ def news_technology():
 
 @main.route("/weather",methods=['GET', 'POST'])
 def weather():
-    form = WeatherForm
+    form = WeatherForm()
     if form.validate_form():
         city_name = form.city.data
         weather_list = weather_data(city_name)
