@@ -1,4 +1,4 @@
-from flask import render_template, request, Blueprint, redirect
+from flask import render_template, request, Blueprint
 from flaskblog.models import Post, User
 from flask_login import current_user
 from flaskblog.news import create_news, create_news_business, create_news_entertainment, create_news_sports, create_news_health, create_news_science, create_news_technology
@@ -107,25 +107,21 @@ def news_technology():
 
 @main.route("/weather",methods=['GET', 'POST'])
 def weather():
-    form = WeatherForm()
     if form.validate_on_submit():
-        return redirect(weather_form(form))
-    else:
-        weather_list = weather_data('nalgonda')
+        city = form.city.data
+        weather_list = weather_data(city)
         city_name =  weather_list[0]
         temperature =  weather_list[1]
         humidity =  weather_list[2]
         pressure =  weather_list[3]
         report =  weather_list[4]
-        return render_template('weather.html',title= "weather",form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
-
-@main.route("/weather",methods=['GET', 'POST'])
-def weather_form(form):
-    city = form.city.data
-    weather_list = weather_data(city)
-    city_name =  weather_list[0]
-    temperature =  weather_list[1]
-    humidity =  weather_list[2]
-    pressure =  weather_list[3]
-    report =  weather_list[4]
-    return render_template('weather.html',title= "weather",form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
+        return render_template('weather.html',title= weather,form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
+    else:
+        form = WeatherForm()
+        weather_list = weather_data('hyderabad')
+        city_name =  weather_list[0]
+        temperature =  weather_list[1]
+        humidity =  weather_list[2]
+        pressure =  weather_list[3]
+        report =  weather_list[4]
+        return render_template('weather.html',title= weather,form=form, city_name=city_name,temperature=temperature,humidity=humidity,pressure=pressure,report=report)
