@@ -4,7 +4,7 @@ import json
 
 
 def create_news():
-    url="http://newsapi.org/v2/top-headlines?country=in&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&apiKey={YOUR API KEY}"
 
     response = urllib.urlopen(url)
     data = json.loads(response.read())
@@ -25,7 +25,7 @@ def create_news():
 
 
 def create_news_business():
-    url="http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey={YOUR API KEY}"
 
     response = urllib.urlopen(url)
     data = json.loads(response.read())
@@ -45,7 +45,7 @@ def create_news_business():
 
     
 def create_news_entertainment():
-    url="http://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey={YOUR API KEY}"
 
     response = urllib.urlopen(url)
     data = json.loads(response.read())
@@ -65,7 +65,7 @@ def create_news_entertainment():
 
 
 def create_news_sports():
-    url="http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey={YOUR API KEY}"
 
     response = urllib.urlopen(url)
     data = json.loads(response.read())
@@ -84,7 +84,7 @@ def create_news_sports():
 
 
 def create_news_health():
-    url="http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey={YOUR API KEY}"
 
     response = urllib.urlopen(url)
     data = json.loads(response.read())
@@ -103,7 +103,7 @@ def create_news_health():
 
 
 def create_news_science():
-    url="http://newsapi.org/v2/top-headlines?country=in&category=science&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&category=science&apiKey={YOUR API KEY}"
 
     response = urllib.urlopen(url)
     data = json.loads(response.read())
@@ -122,7 +122,7 @@ def create_news_science():
 
 
 def create_news_technology():
-    url="http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=7b57dbfa104847e6b72e2a4b28e51401"
+    url="http://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey={YOUR API KEY}"
 
     response = urllib.urlopen(url)
     data = json.loads(response.read())
